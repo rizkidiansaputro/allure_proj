@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Action untuk Custom Model -->
+    <record id="action_custom_model" model="ir.actions.act_window">
+        <field name="name">Custom Model</field>
+        <field name="res_model">custom.model</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Action untuk FPPP Model -->
+    <record id="action_fppp_model" model="ir.actions.act_window">
+        <field name="name">FPPP Model</field>
+        <field name="res_model">fppp.model</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Action untuk Sequence Configuration -->
+    <record id="action_sequence_config" model="ir.actions.act_window">
+        <field name="name">Sequence Configuration</field>
+        <field name="res_model">sequence.config</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+    <!-- Menu Item untuk Custom -->
+    <menuitem id="menu_custom_root" name="Custom"/>
+    <menuitem id="menu_custom__model_root" name="Custom Sequence" parent="menu_custom_root" sequence="10" />
+    <menuitem id="menu_custom_model" name="Custom Model" parent="menu_custom__model_root" action="action_custom_model"/>
+
+    <!-- Menu Item untuk FPPP -->
+    <menuitem id="menu_fppp__model_root" name="FPPP" parent="menu_custom_root" sequence="20" />
+    <menuitem id="menu_fppp_model" name="FPPP Order" parent="menu_fppp__model_root" action="action_fppp_model"/>
+
+    <!-- Menu Item untuk Sequence Configuration (sebagai submenu dari Custom) -->
+    <menuitem id="menu_config_root" name="Configuration" parent="menu_custom_root" sequence="90"/>
+    <menuitem id="menu_sequence_config" name="Sequence Configuration" parent="menu_config_root" action="action_sequence_config" sequence="10"/>
+
+
+
+    <!-- Tree View untuk Custom Model -->
+    <record id="view_custom_model_tree" model="ir.ui.view">
+        <field name="name">custom.model.tree</field>
+        <field name="model">custom.model</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View untuk Custom Model -->
+    <record id="view_custom_model_form" model="ir.ui.view">
+        <field name="name">custom.model.form</field>
+        <field name="model">custom.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+    <!-- Tree View untuk FPPP Model -->
+    <record id="view_fppp_model_tree" model="ir.ui.view">
+        <field name="name">fppp.model.tree</field>
+        <field name="model">fppp.model</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name_fppp"/>
+                <field name="code_fppp"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View untuk FPPP Model -->
+    <record id="view_fppp_model_form" model="ir.ui.view">
+        <field name="name">fppp.model.form</field>
+        <field name="model">fppp.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name_fppp"/>
+                        <field name="code_fppp"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+    <!-- Tree View untuk Sequence Configuration -->
+    <record id="view_sequence_config_tree" model="ir.ui.view">
+        <field name="name">sequence.config.tree</field>
+        <field name="model">sequence.config</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="prefix"/>
+                <field name="padding"/>
+                <field name="number_next"/>
+                <field name="number_increment"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View untuk Sequence Configuration -->
+    <record id="view_sequence_config_form" model="ir.ui.view">
+        <field name="name">sequence.config.form</field>
+        <field name="model">sequence.config</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="prefix"/>
+                        <field name="padding"/>
+                        <field name="number_next"/>
+                        <field name="number_increment"/>
+                    </group>
+                    <footer>
+                        <button string="Update Sequence" type="object" name="update_sequence" class="btn-primary"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

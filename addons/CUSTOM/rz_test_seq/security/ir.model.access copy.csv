@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_rz_test_seq_rz_test_seq,rz_test_seq.rz_test_seq,model_rz_test_seq_rz_test_seq,base.group_user,1,1,1,1
+
+access_custom_model,custom.model.access,model_custom_model,,1,1,1,1

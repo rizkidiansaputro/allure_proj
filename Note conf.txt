@@ -1,0 +1,35 @@
+Installer v14 ORI:
+
+======================
+host: localhost
+port: 5432
+Usr : openpg
+pas : openpgpwd
+
+DB [TES_ALU]
+masterpwd : rtnj-a7e6-ak2z
+email     : admin@alu.co.id
+pw        : admin
+
+===========================
+CUSTOM conf
+posgresql v14.17
+=========================
+
+Pg v.14
+pw  : AllurePG-2025
+port: 5439
+
+
+===============================
+PROJECT CUSTOM
+C:\ERP\ODOO\INST
+py14_inst
+===============================
+db_user = odoo
+db_password = odoopwd
+db_port = 5439
+
+DB [TESTING]
+email: admin@allure.co.id
+pw   : admin

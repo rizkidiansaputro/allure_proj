@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Define a sequence -->
+    <record id="seq_custom_code" model="ir.sequence">
+        <field name="name">Custom Sequence</field>
+        <field name="code">custom.sequence</field>
+        <field name="prefix">CUST/</field>
+        <field name="padding">5</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+        <field name="implementation">standard</field>
+    </record>
+
+
+
+    <!-- Define a FPPP sequence -->
+    <record id="fppp_seq_custom_code" model="ir.sequence">
+        <field name="name">FPPP Custom Sequence</field>
+        <field name="code">fppp.custom.sequence</field>
+        <field name="prefix">FPPP/</field>
+        <field name="suffix">/CUST</field>  <!-- Tambahkan suffix -->
+        <field name="padding">5</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+        <field name="implementation">standard</field>
+    </record>
+</odoo>
