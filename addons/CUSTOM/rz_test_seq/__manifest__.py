@@ -27,8 +27,9 @@
         'security/ir.model.access.csv',
         'data/sequence.xml',
         'views/sequence_views.xml',
-        'views/views.xml',
-        'views/templates.xml',
+        'views/configuration_masdata_views.xml',
+        # 'views/views.xml',
+        # 'views/templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

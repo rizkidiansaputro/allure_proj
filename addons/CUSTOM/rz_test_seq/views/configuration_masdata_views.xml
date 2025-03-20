@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Action untuk BRAND Master Model -->
+    <record id="action_brand_mass_model" model="ir.actions.act_window">
+        <field name="name">Brand Master</field>
+        <field name="res_model">brand.mass.model</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+    <!-- Menu Item untuk BRAND Master Configuration (sebagai submenu dari Custom) -->
+    <!-- <menuitem id="menu_config_root" name="Configuration" parent="menu_custom_root" sequence="90"/> -->
+    <menuitem id="menu_sequence_config_brand" name="Brand Master Data" parent="menu_config_root" action="action_brand_mass_model" sequence="20"/>
+
+
+
+    <!-- Tree View untuk BRAND Master Model -->
+    <record id="view_brand_mass_model_tree" model="ir.ui.view">
+        <field name="name">brand.mass.model.tree</field>
+        <field name="model">brand.mass.model</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nama"/>
+                <field name="kode"/>
+                <field name="desc"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View untuk BRAND Master Model -->
+    <record id="view_brand_mass_model_form" model="ir.ui.view">
+        <field name="name">brand.mass.model.form</field>
+        <field name="model">brand.mass.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="nama"/>
+                        <field name="kode"/>
+                        <field name="desc"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

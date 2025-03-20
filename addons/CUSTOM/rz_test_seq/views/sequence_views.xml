@@ -89,7 +89,9 @@
                 <sheet>
                     <group>
                         <field name="name_fppp"/>
-                        <field name="code_fppp"/>
+                        <!-- <field name="code_fppp"/> -->
+                    <field name="fppp_config_id"/>  <!-- Many2one ke sequence.config -->
+                    <field name="code_fppp" readonly="1"/>  <!-- Field code (readonly) -->
                     </group>
                 </sheet>
             </form>
@@ -105,10 +107,11 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="prefix"/>
-                <field name="padding"/>
-                <field name="number_next"/>
-                <field name="number_increment"/>
+                <field name="prefix_seq_conf"/>
+                <field name="suffix_seq_conf"/>
+                <field name="padding_seq_conf"/>
+                <field name="number_next_seq_conf"/>
+                <field name="number_increment_seq_conf"/>
             </tree>
         </field>
     </record>
@@ -122,10 +125,11 @@
                 <sheet>
                     <group>
                         <field name="name"/>
-                        <field name="prefix"/>
-                        <field name="padding"/>
-                        <field name="number_next"/>
-                        <field name="number_increment"/>
+                        <field name="prefix_seq_conf"/>
+                        <field name="suffix_seq_conf"/>
+                        <field name="padding_seq_conf"/>
+                        <field name="number_next_seq_conf"/>
+                        <field name="number_increment_seq_conf"/>
                     </group>
                     <footer>
                         <button string="Update Sequence" type="object" name="update_sequence" class="btn-primary"/>

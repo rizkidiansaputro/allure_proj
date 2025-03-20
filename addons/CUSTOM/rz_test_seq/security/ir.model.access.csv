@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_custom_model,custom.model.access,model_custom_model,,1,1,1,1
 access_fppp_model,fppp.model.access,model_fppp_model,,1,1,1,1
 access_sequence_config,sequence.config.access,model_sequence_config,,1,1,1,1
+access_brand_mass_model,brand.mass.model.access,model_brand_mass_model,,1,1,1,1

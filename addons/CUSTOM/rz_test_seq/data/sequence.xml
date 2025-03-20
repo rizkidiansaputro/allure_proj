@@ -17,8 +17,10 @@
     <record id="fppp_seq_custom_code" model="ir.sequence">
         <field name="name">FPPP Custom Sequence</field>
         <field name="code">fppp.custom.sequence</field>
-        <field name="prefix">FPPP/</field>
-        <field name="suffix">/CUST</field>  <!-- Tambahkan suffix -->
+        <!-- <field name="prefix">FPPP/</field>
+        <field name="suffix">/CUST</field>  Tambahkan suffix -->
+        <field name="prefix">%(prefix)s</field>  <!-- Gunakan prefix dari configuration / Gunakan placeholder untuk prefix dan suffix -->
+        <field name="suffix">%(suffix)s</field>  <!--  Gunakan suffix dari configuration -->
         <field name="padding">5</field>
         <field name="number_next">1</field>
         <field name="number_increment">1</field>
